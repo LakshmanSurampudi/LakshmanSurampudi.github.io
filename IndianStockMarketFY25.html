@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Title | Lakshman Surampudi Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Prism.js for code highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" />
+    <style>
+        .blog-container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            padding: 32px 24px;
+        }
+        .blog-hero {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 24px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+        }
+        .blog-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        .blog-meta {
+            color: #666;
+            font-size: 1rem;
+            margin-bottom: 24px;
+        }
+        .blog-tags {
+            margin-bottom: 24px;
+        }
+        .blog-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #fff;
+            border-radius: 4px;
+            padding: 4px 12px;
+            margin-right: 8px;
+            font-size: 0.95rem;
+            margin-bottom: 4px;
+        }
+        .blog-image {
+            width: 100%;
+            border-radius: 8px;
+            margin: 24px 0 8px 0;
+            box-shadow: 0 1px 8px rgba(0,0,0,0.08);
+        }
+        .blog-img-caption {
+            text-align: center;
+            color: #888;
+            font-size: 0.95rem;
+            margin-bottom: 16px;
+        }
+        .blog-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 24px 0;
+        }
+        .blog-table th, .blog-table td {
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+        }
+        .blog-table th {
+            background: #f4f4f4;
+            font-weight: bold;
+        }
+        .blog-code {
+            margin: 24px 0;
+        }
+        .blog-links {
+            margin: 24px 0;
+        }
+        .blog-links a {
+            color: #4f46e5;
+            text-decoration: underline;
+            margin-right: 16px;
+        }
+        .back-btn {
+            display: inline-block;
+            margin: 32px 0 0 0;
+            padding: 10px 24px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+        .back-btn:hover {
+            background: linear-gradient(135deg, #764ba2, #667eea);
+        }
+        .social-share {
+            margin: 32px 0 0 0;
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+        .social-share span {
+            font-size: 1.1rem;
+            color: #555;
+        }
+        .social-share a {
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: #f4f4f4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+            font-size: 1.3rem;
+            transition: background 0.2s;
+        }
+        .social-share a:hover {
+            background: #e0e7ff;
+        }
+        @media (max-width: 600px) {
+            .blog-container {
+                padding: 10px 2vw;
+            }
+            .blog-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Surampudi Lakshman</h1>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="blog-container">
+            <img src="your-hero-image.jpg" alt="Project Hero Image" class="blog-hero">
+            <div class="blog-title">Project Title Goes Here</div>
+            <div class="blog-meta">By Lakshman Surampudi | <span id="blog-date">Month DD, YYYY</span></div>
+            <div class="blog-tags">
+                <span class="blog-tag">Python</span>
+                <span class="blog-tag">SQL</span>
+                <span class="blog-tag">Power BI</span>
+                <!-- Add more tags as needed -->
+            </div>
+            <p>
+                <!-- Write your introduction or summary paragraph here. -->
+                This is a template for your data analysis project blogpost. Replace this text with your project introduction.
+            </p>
+            <h2>Section Heading</h2>
+            <p>
+                <!-- Add more paragraphs as needed. -->
+                Describe your methodology, findings, or insights here.
+            </p>
+            <img src="your-image.jpg" alt="Descriptive Alt Text" class="blog-image">
+            <div class="blog-img-caption">Figure 1: Caption describing the image above.</div>
+            <h3>Code Example</h3>
+            <pre class="blog-code"><code class="language-python"># Example Python code snippet
+def hello_world():
+    print("Hello, world!")
+</code></pre>
+            <h3>Table Example</h3>
+            <table class="blog-table">
+                <tr>
+                    <th>Column 1</th>
+                    <th>Column 2</th>
+                </tr>
+                <tr>
+                    <td>Value 1</td>
+                    <td>Value 2</td>
+                </tr>
+            </table>
+            <div class="blog-links">
+                <a href="https://github.com/your-repo" target="_blank" rel="noopener">View on GitHub</a>
+                <a href="https://www.kaggle.com/" target="_blank" rel="noopener">Related Dataset</a>
+            </div>
+            <a href="index.html" class="back-btn">&larr; Back to Portfolio</a>
+            <div class="social-share">
+                <span>Share:</span>
+                <a href="#" title="Share on Twitter" onclick="window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent(document.title+' '+window.location.href),'_blank');return false;">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557a9.93 9.93 0 01-2.828.775 4.932 4.932 0 002.165-2.724c-.951.564-2.005.974-3.127 1.195a4.92 4.92 0 00-8.384 4.482C7.691 8.095 4.066 6.13 1.64 3.161c-.542.929-.856 2.01-.857 3.17 0 2.188 1.115 4.117 2.823 5.254a4.904 4.904 0 01-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.936 4.936 0 01-2.224.084c.627 1.956 2.444 3.377 4.6 3.417A9.867 9.867 0 010 21.543a13.94 13.94 0 007.548 2.209c9.058 0 14.009-7.513 14.009-14.009 0-.213-.005-.425-.014-.636A10.012 10.012 0 0024 4.557z"/></svg>
+                </a>
+                <a href="#" title="Share on LinkedIn" onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url='+encodeURIComponent(window.location.href)+'&title='+encodeURIComponent(document.title),'_blank');return false;">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.604c0-1.337-.025-3.063-1.868-3.063-1.868 0-2.154 1.459-2.154 2.968v5.699h-3v-10h2.881v1.367h.041c.401-.761 1.379-1.563 2.841-1.563 3.039 0 3.6 2.001 3.6 4.601v5.595z"/></svg>
+                </a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Lakshman Surampudi.</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script>
+        // Set current date if not filled
+        const dateElem = document.getElementById('blog-date');
+        if (dateElem && dateElem.textContent === 'Month DD, YYYY') {
+            const now = new Date();
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            dateElem.textContent = now.toLocaleDateString(undefined, options);
+        }
+    </script>
+</body>
+</html> 
