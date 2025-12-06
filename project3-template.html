@@ -3,132 +3,306 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Title | Lakshman Surampudi Portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
-    <!-- Prism.js for code highlighting -->
+    <title>[Project Title] | Lakshman Surampudi Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" />
     <style>
-        .blog-container {
-            max-width: 800px;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9fafb;
+        }
+
+        header {
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header nav {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        main {
+            max-width: 900px;
             margin: 40px auto;
             background: #fff;
             border-radius: 12px;
             box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-            padding: 32px 24px;
+            padding: 40px;
         }
-        .blog-hero {
+
+        .hero-image {
             width: 100%;
             border-radius: 10px;
-            margin-bottom: 24px;
+            margin-bottom: 30px;
             box-shadow: 0 2px 12px rgba(0,0,0,0.10);
         }
-        .blog-title {
+
+        .project-title {
             font-size: 2.5rem;
-            font-weight: bold;
-            margin-bottom: 8px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+            line-height: 1.2;
         }
-        .blog-meta {
+
+        .project-meta {
             color: #666;
             font-size: 1rem;
             margin-bottom: 24px;
         }
-        .blog-tags {
-            margin-bottom: 24px;
+
+        .tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
         }
-        .blog-tag {
+
+        .tag {
             display: inline-block;
             background: linear-gradient(135deg, #667eea, #764ba2);
             color: #fff;
             border-radius: 4px;
-            padding: 4px 12px;
-            margin-right: 8px;
+            padding: 6px 14px;
             font-size: 0.95rem;
-            margin-bottom: 4px;
         }
-        .blog-image {
+
+        .content-section {
+            margin: 40px 0;
+        }
+
+        h2 {
+            font-size: 1.875rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin: 40px 0 20px 0;
+            padding-top: 20px;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        h2:first-of-type {
+            border-top: none;
+            padding-top: 0;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin: 30px 0 15px 0;
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: #444;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        ul, ol {
+            margin: 16px 0 16px 25px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            color: #444;
+            line-height: 1.6;
+        }
+
+        strong {
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        .figure {
+            margin: 30px 0;
+        }
+
+        .figure img {
             width: 100%;
+            height: auto;
             border-radius: 8px;
-            margin: 24px 0 8px 0;
-            box-shadow: 0 1px 8px rgba(0,0,0,0.08);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
-        .blog-img-caption {
+
+        .figure-caption {
             text-align: center;
             color: #888;
             font-size: 0.95rem;
-            margin-bottom: 16px;
+            margin-top: 10px;
+            font-style: italic;
         }
-        .blog-table {
+
+        .highlight-box {
+            background: #f0f4ff;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin: 24px 0;
+            border-radius: 4px;
+        }
+
+        .highlight-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .stat-highlight {
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        .code-section {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 24px 0;
+            overflow-x: auto;
+            border: 1px solid #e9ecef;
+        }
+
+        pre {
+            margin: 0;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        code {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        table {
             width: 100%;
             border-collapse: collapse;
             margin: 24px 0;
+            font-size: 0.95rem;
+            background: #fff;
         }
-        .blog-table th, .blog-table td {
-            border: 1px solid #ddd;
-            padding: 8px 12px;
+
+        table th, table td {
+            border: 1px solid #e5e7eb;
+            padding: 12px;
+            text-align: left;
         }
-        .blog-table th {
-            background: #f4f4f4;
-            font-weight: bold;
+
+        table th {
+            background: #f9fafb;
+            font-weight: 600;
+            color: #1a1a1a;
         }
-        .blog-code {
-            margin: 24px 0;
+
+        table tr:hover {
+            background: #f9fafb;
         }
-        .blog-links {
-            margin: 24px 0;
-        }
-        .blog-links a {
-            color: #4f46e5;
-            text-decoration: underline;
-            margin-right: 16px;
-        }
-        .back-btn {
+
+        .github-link {
             display: inline-block;
-            margin: 32px 0 0 0;
-            padding: 10px 24px;
             background: linear-gradient(135deg, #667eea, #764ba2);
-            color: #fff;
-            border: none;
+            color: white;
+            padding: 12px 28px;
             border-radius: 6px;
-            font-size: 1.1rem;
-            cursor: pointer;
             text-decoration: none;
-            transition: background 0.2s;
+            font-weight: 500;
+            margin: 30px 0 20px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
         }
-        .back-btn:hover {
-            background: linear-gradient(135deg, #764ba2, #667eea);
+
+        .github-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
         }
-        .social-share {
-            margin: 32px 0 0 0;
+
+        .back-link {
+            display: inline-block;
+            color: #667eea;
+            text-decoration: none;
+            margin: 30px 0;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+
+        .share-section {
+            margin: 40px 0 0 0;
+            padding-top: 30px;
+            border-top: 1px solid #e5e7eb;
             display: flex;
             gap: 16px;
             align-items: center;
         }
-        .social-share span {
+
+        .share-section span {
             font-size: 1.1rem;
             color: #555;
+            font-weight: 500;
         }
-        .social-share a {
-            display: inline-block;
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            background: #f4f4f4;
+
+        .share-section a {
             display: flex;
             align-items: center;
             justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: #f4f4f4;
             color: #333;
-            font-size: 1.3rem;
-            transition: background 0.2s;
+            transition: all 0.2s;
         }
-        .social-share a:hover {
+
+        .share-section a:hover {
             background: #e0e7ff;
+            transform: translateY(-2px);
         }
-        @media (max-width: 600px) {
-            .blog-container {
-                padding: 10px 2vw;
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #666;
+            font-size: 14px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            main {
+                padding: 24px 20px;
+                margin: 20px;
             }
-            .blog-title {
+
+            .project-title {
                 font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            h3 {
+                font-size: 1.25rem;
             }
         }
     </style>
@@ -136,77 +310,214 @@
 <body>
     <header>
         <nav>
-            <div class="logo">
-                <h1>Surampudi Lakshman</h1>
-            </div>
+            <h1>Surampudi Lakshman</h1>
         </nav>
     </header>
+
     <main>
-        <div class="blog-container">
-            <img src="your-hero-image.jpg" alt="Project Hero Image" class="blog-hero">
-            <div class="blog-title">Project Title Goes Here</div>
-            <div class="blog-meta">By Lakshman Surampudi | <span id="blog-date">Month DD, YYYY</span></div>
-            <div class="blog-tags">
-                <span class="blog-tag">Python</span>
-                <span class="blog-tag">SQL</span>
-                <span class="blog-tag">Power BI</span>
-                <!-- Add more tags as needed -->
-            </div>
+        <!-- Hero Section -->
+        <img src="images/project-hero.jpg" alt="[Project Name] Hero Image" class="hero-image">
+        
+        <h1 class="project-title">[Project Title Goes Here]</h1>
+        
+        <div class="project-meta">
+            By Lakshman Surampudi | <span id="blog-date">[Month Year]</span>
+        </div>
+
+        <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">Power BI</span>
+            <span class="tag">Data Analysis</span>
+            <!-- Add more tags as needed -->
+        </div>
+
+        <!-- Introduction Section -->
+        <div class="content-section">
             <p>
-                <!-- Write your introduction or summary paragraph here. -->
-                This is a template for your data analysis project blogpost. Replace this text with your project introduction.
+                <strong>[Introduction]</strong> Write your project introduction here. Explain the context, 
+                problem statement, and objectives. What motivated this analysis? What questions are you trying to answer?
             </p>
-            <h2>Section Heading</h2>
+        </div>
+
+        <!-- Data Section -->
+        <h2>The Data</h2>
+        <div class="content-section">
             <p>
-                <!-- Add more paragraphs as needed. -->
-                Describe your methodology, findings, or insights here.
+                <strong>[Data Overview]</strong> Describe your dataset(s) here. Include information about:
             </p>
-            <img src="your-image.jpg" alt="Descriptive Alt Text" class="blog-image">
-            <div class="blog-img-caption">Figure 1: Caption describing the image above.</div>
-            <h3>Code Example</h3>
-            <pre class="blog-code"><code class="language-python"># Example Python code snippet
-def hello_world():
-    print("Hello, world!")
-</code></pre>
-            <h3>Table Example</h3>
-            <table class="blog-table">
-                <tr>
-                    <th>Column 1</th>
-                    <th>Column 2</th>
-                </tr>
-                <tr>
-                    <td>Value 1</td>
-                    <td>Value 2</td>
-                </tr>
-            </table>
-            <div class="blog-links">
-                <a href="https://github.com/your-repo" target="_blank" rel="noopener">View on GitHub</a>
-                <a href="https://www.kaggle.com/" target="_blank" rel="noopener">Related Dataset</a>
-            </div>
-            <a href="index.html" class="back-btn">&larr; Back to Portfolio</a>
-            <div class="social-share">
-                <span>Share:</span>
-                <a href="#" title="Share on Twitter" onclick="window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent(document.title+' '+window.location.href),'_blank');return false;">
-                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557a9.93 9.93 0 01-2.828.775 4.932 4.932 0 002.165-2.724c-.951.564-2.005.974-3.127 1.195a4.92 4.92 0 00-8.384 4.482C7.691 8.095 4.066 6.13 1.64 3.161c-.542.929-.856 2.01-.857 3.17 0 2.188 1.115 4.117 2.823 5.254a4.904 4.904 0 01-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.936 4.936 0 01-2.224.084c.627 1.956 2.444 3.377 4.6 3.417A9.867 9.867 0 010 21.543a13.94 13.94 0 007.548 2.209c9.058 0 14.009-7.513 14.009-14.009 0-.213-.005-.425-.014-.636A10.012 10.012 0 0024 4.557z"/></svg>
-                </a>
-                <a href="#" title="Share on LinkedIn" onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url='+encodeURIComponent(window.location.href)+'&title='+encodeURIComponent(document.title),'_blank');return false;">
-                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.604c0-1.337-.025-3.063-1.868-3.063-1.868 0-2.154 1.459-2.154 2.968v5.699h-3v-10h2.881v1.367h.041c.401-.761 1.379-1.563 2.841-1.563 3.039 0 3.6 2.001 3.6 4.601v5.595z"/></svg>
-                </a>
+            <ul>
+                <li>Data sources and how you obtained them</li>
+                <li>Size and structure of the dataset(s)</li>
+                <li>Key variables and their meanings</li>
+                <li>Time period covered</li>
+            </ul>
+
+            <div class="figure">
+                <img src="images/data-structure.jpg" alt="Data Structure Overview">
+                <div class="figure-caption">Figure 1: Data structure and schema overview</div>
             </div>
         </div>
+
+        <!-- Methodology Section -->
+        <h2>Methodology & Approach</h2>
+        <div class="content-section">
+            <p>
+                <strong>[Methodology]</strong> Explain your analytical approach:
+            </p>
+            <ul>
+                <li>Data cleaning and preprocessing steps</li>
+                <li>Tools and technologies used (Python, SQL, Power BI, etc.)</li>
+                <li>Analysis techniques and methods applied</li>
+                <li>Key metrics and calculations</li>
+            </ul>
+
+            <h3>Code Example</h3>
+            <div class="code-section">
+                <pre><code class="language-python"># Example: Data loading and preprocessing
+import pandas as pd
+import numpy as np
+
+# Load data
+df = pd.read_csv('data.csv')
+
+# Basic preprocessing
+df['column'] = df['column'].str.strip()
+df = df.dropna()
+
+# Calculate key metrics
+df['metric'] = df['value'] / df['total'] * 100
+
+print(df.head())</code></pre>
+            </div>
+        </div>
+
+        <!-- Analysis & Insights Section 1 -->
+        <h2>[Analysis Section 1: Key Finding]</h2>
+        <div class="content-section">
+            <p>
+                <strong>[Analysis]</strong> Present your first major finding or analysis area here.
+            </p>
+
+            <div class="figure">
+                <img src="images/analysis-1.jpg" alt="Analysis Visualization">
+                <div class="figure-caption">Figure 2: [Description of visualization]</div>
+            </div>
+
+            <h3>Key Insights</h3>
+            <ul>
+                <li><strong>Insight 1:</strong> Describe the first key insight with supporting data</li>
+                <li><strong>Insight 2:</strong> Explain another important finding</li>
+                <li><strong>Insight 3:</strong> Present additional observations</li>
+            </ul>
+
+            <div class="highlight-box">
+                <strong>Important Note:</strong> Use highlight boxes to emphasize critical insights, 
+                warnings, or key takeaways that readers should pay special attention to.
+            </div>
+        </div>
+
+        <!-- Analysis & Insights Section 2 -->
+        <h2>[Analysis Section 2: Additional Findings]</h2>
+        <div class="content-section">
+            <p>
+                Continue with additional analysis sections as needed. You can add multiple sections 
+                following this pattern.
+            </p>
+
+            <div class="figure">
+                <img src="images/analysis-2.jpg" alt="Additional Analysis">
+                <div class="figure-caption">Figure 3: [Description of visualization]</div>
+            </div>
+
+            <h3>Statistical Summary</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Value</th>
+                        <th>Change (%)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Metric 1</td>
+                        <td class="stat-highlight">1,234</td>
+                        <td style="color: #16a34a;">+5.2%</td>
+                    </tr>
+                    <tr>
+                        <td>Metric 2</td>
+                        <td class="stat-highlight">5,678</td>
+                        <td style="color: #dc2626;">-2.3%</td>
+                    </tr>
+                    <tr>
+                        <td>Metric 3</td>
+                        <td class="stat-highlight">9,012</td>
+                        <td style="color: #16a34a;">+8.7%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Recommendations Section (Optional) -->
+        <h2>Key Recommendations</h2>
+        <div class="content-section">
+            <p>
+                <strong>[Strategic Recommendations]</strong> Based on the analysis, here are the 
+                data-driven recommendations:
+            </p>
+            <ul>
+                <li><strong>Recommendation 1:</strong> Describe the first actionable recommendation</li>
+                <li><strong>Recommendation 2:</strong> Explain another strategic suggestion</li>
+                <li><strong>Recommendation 3:</strong> Present additional recommendations</li>
+            </ul>
+        </div>
+
+        <!-- Conclusion Section -->
+        <h2>Conclusion</h2>
+        <div class="content-section">
+            <p>
+                Summarize your findings and their implications. What are the main takeaways? 
+                What impact could this analysis have? What are potential next steps or future work?
+            </p>
+
+            <div class="highlight-box">
+                <strong>Key Takeaways:</strong>
+                <ul style="margin: 10px 0 0 20px;">
+                    <li>Summarize the most important findings</li>
+                    <li>Highlight the practical implications</li>
+                    <li>Note any limitations or considerations</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- GitHub and External Links -->
+        <a href="https://github.com/yourusername/your-repo" class="github-link" target="_blank">View on GitHub</a>
+
+        <!-- Social Share Section -->
+        <div class="share-section">
+            <span>Share:</span>
+            <a href="#" title="Share on Twitter" onclick="window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent(document.title+' '+window.location.href),'_blank');return false;">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M24 4.557a9.93 9.93 0 01-2.828.775 4.932 4.932 0 002.165-2.724c-.951.564-2.005.974-3.127 1.195a4.92 4.92 0 00-8.384 4.482C7.691 8.095 4.066 6.13 1.64 3.161c-.542.929-.856 2.01-.857 3.17 0 2.188 1.115 4.117 2.823 5.254a4.904 4.904 0 01-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.936 4.936 0 01-2.224.084c.627 1.956 2.444 3.377 4.6 3.417A9.867 9.867 0 010 21.543a13.94 13.94 0 007.548 2.209c9.058 0 14.009-7.513 14.009-14.009 0-.213-.005-.425-.014-.636A10.012 10.012 0 0024 4.557z"/>
+                </svg>
+            </a>
+            <a href="#" title="Share on LinkedIn" onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url='+encodeURIComponent(window.location.href)+'&title='+encodeURIComponent(document.title),'_blank');return false;">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.604c0-1.337-.025-3.063-1.868-3.063-1.868 0-2.154 1.459-2.154 2.968v5.699h-3v-10h2.881v1.367h.041c.401-.761 1.379-1.563 2.841-1.563 3.039 0 3.6 2.001 3.6 4.601v5.595z"/>
+                </svg>
+            </a>
+        </div>
+
+        <!-- Back Link -->
+        <a href="index.html" class="back-link">← Back to Portfolio</a>
     </main>
+
     <footer>
         <p>&copy; 2025 Lakshman Surampudi.</p>
     </footer>
+
+    <!-- Prism.js for syntax highlighting -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-    <script>
-        // Set current date if not filled
-        const dateElem = document.getElementById('blog-date');
-        if (dateElem && dateElem.textContent === 'Month DD, YYYY') {
-            const now = new Date();
-            const options = { year: 'numeric', month: 'long', day: 'numeric' };
-            dateElem.textContent = now.toLocaleDateString(undefined, options);
-        }
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
 </body>
-</html> 
+</html>
