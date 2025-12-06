@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Transaction Analysis | Lakshman Surampudi Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #ffffff;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0 20px;
+            border-bottom: 1px solid #e0e0e0;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        .hero-section {
+            margin-bottom: 40px;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 400px;
+            background-color: #f5f5f5;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+        }
+
+        .project-title {
+            font-size: 36px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .project-meta {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .tag {
+            background-color: #f0f0f0;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            color: #555;
+        }
+
+        .content-section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 28px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 20px;
+            margin-top: 40px;
+        }
+
+        h3 {
+            font-size: 22px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 15px;
+            margin-top: 30px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #444;
+            font-size: 16px;
+        }
+
+        ul {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            color: #444;
+        }
+
+        .figure {
+            margin: 30px 0;
+        }
+
+        .figure img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            background-color: #f5f5f5;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .figure-caption {
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        .code-section {
+            background-color: #f8f8f8;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 30px 0;
+            overflow-x: auto;
+        }
+
+        pre {
+            margin: 0;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        code {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .github-link {
+            display: inline-block;
+            background-color: #24292e;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            margin: 30px 0;
+            transition: background-color 0.3s;
+        }
+
+        .github-link:hover {
+            background-color: #1a1e22;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: #0066cc;
+            text-decoration: none;
+            margin: 40px 0;
+            font-size: 16px;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .share-section {
+            margin: 40px 0;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: #666;
+            font-size: 14px;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 60px;
+        }
+
+        .data-table {
+            background-color: #fafafa;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 20px 0;
+            font-size: 15px;
+        }
+
+        strong {
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Surampudi Lakshman</h1>
+        </header>
+
+        <div class="hero-section">
+            <div class="hero-image">
+                <img src="customer-transaction-hero.jpg" alt="Customer Transaction Analysis Hero Image" style="display: none;">
+                [Hero Image Placeholder]
+            </div>
+
+            <h1 class="project-title">Customer Transaction Analysis</h1>
+
+            <div class="project-meta">
+                By Lakshman Surampudi | Month DD, YYYY
+            </div>
+
+            <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">Power BI</span>
+                <span class="tag">Data Analysis</span>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <p><strong>[Introduction]</strong> Mitron bank wants to launch a new line of credit cards to scale up their business and widen their product spectrum. Knowing this, Atliq Services proposed to materialize it and Mitron bank asked them to do a pilot project. Assuming myself as a Data Analyst working in Atliq services, I'm going to analyze the data, extract insights and suggest data-driven recommendations useful for Mitron Bank. I'm using Python for data analysis and Power BI for visualization for this project.</p>
+
+            <p>The objective of this CodeBasics Resume Project Challenge is to analyze the customer data, extract useful insights and recommend profitable strategies or attractive features for the bank's product strategy team of Mitron bank, who is aiming to launch a new credit card product into the market.</p>
+        </div>
+
+        <h2>The Data</h2>
+        <div class="content-section">
+            <p><strong>[Data Section]</strong> We have two tables: <em>dim_customers.csv</em> and <em>fact_spends.csv</em>.</p>
+
+            <p>The first table consists of 4000 rows, containing the details of 4000 customers including their <strong>Gender, Age group, Marital Status, Location, Occupation and Average Income</strong>.</p>
+
+            <p>The second table consists of 864,000 rows containing <strong>Monthly average spending</strong> of these 4000 customers on <strong>nine</strong> different <strong>categories</strong> using <strong>four</strong> different <strong>payment modes</strong> over a time period of six months.</p>
+
+            <div class="figure">
+                <img src="data-structure.png" alt="Data Structure">
+                <div class="figure-caption">Figure 1: Data structure overview showing the two tables</div>
+            </div>
+        </div>
+
+        <h2>Customer Demographics & Insights</h2>
+        <div class="content-section">
+            <p><strong>[Customer Data Analysis]</strong> Key observations from the customer data:</p>
+
+            <ul>
+                <li>Among 4000 customers, around 2600 (65%) are Male and the rest are Female; 78% of customers are married and 22% are single.</li>
+                <li>69% of customers are between 25-45 years of age.</li>
+                <li>Mumbai tops in Location with about a quarter of customers there and Hyderabad bottoms the list with around 600 customers.</li>
+                <li>Salaried IT employees are, by occupation, the dominant customers of the bank and salaried government employees the least.</li>
+            </ul>
+
+            <div class="figure">
+                <img src="customer-distribution.png" alt="Customer Distribution">
+                <div class="figure-caption">Figure 2: Frequency Distribution of Customers by Gender, Age group, Marital Status, City & Occupation</div>
+            </div>
+
+            <div class="figure">
+                <img src="income-distribution.png" alt="Income Distribution">
+                <div class="figure-caption">Figure 3: Average Income Distribution among different occupations in different cities</div>
+            </div>
+        </div>
+
+        <h2>Spending Data Analysis</h2>
+        <div class="content-section">
+            <p><strong>[Spending Patterns]</strong> Average spending of customers was calculated and merged with customer data to provide a comprehensive view of income versus spending patterns.</p>
+
+            <div class="figure">
+                <img src="income-spending.png" alt="Income vs Spending">
+                <div class="figure-caption">Figure 4: Average Income & Average Spending of each customer</div>
+            </div>
+
+            <h3>Income Utilization Ratio Analysis</h3>
+
+            <p>By definition, it's the ratio or percentage of income utilized in spending. The objective of a credit card is to afford credit more than the income. Here, we don't analyze by individual per se but we look at how income utilization ratio is varying across cities, occupation and age group because it helps us in identifying the potential customer group who need credit cards or whom the bank can approach to sell credit cards.</p>
+
+            <div class="figure">
+                <img src="income-utilization.png" alt="Income Utilization Ratio">
+                <div class="figure-caption">Figure 5: Income Utilization Ratio distribution by Age group, by City and by Occupation</div>
+            </div>
+
+            <p><strong>Key Insights:</strong></p>
+            <ul>
+                <li>The analysis informs us that though the average income is increasing by age group, the average spending dipped after age of 45 and so does the average income utilization percentage. Therefore, <strong>the target age group for the bank for its new credit card product is 21-45, with 35-45 as utmost priority.</strong></li>
+                <li>Mumbai has the highest income utilization percentage (51%) followed by Delhi and Bengaluru, but it is significantly less in other two cities, Hyderabad and Chennai. Therefore, <strong>the bank must focus more on Mumbai, Delhi and Bengaluru.</strong></li>
+                <li>Salaried IT employees and Freelancers have high utilization percentage. However, while freelancers show high utilization ratios, they don't have stable monthly income and their repayments get affected by it. On the contrary, salaried other employees might have lower income utilization ratio relative to freelancers, but they have intermittent money needs and their repayments are consistent as their income source is salary. Therefore, <strong>the bank must pitch its new product to Salaried IT employees and Salaried Other employees.</strong></li>
+            </ul>
+        </div>
+
+        <h2>Spending by Category & Payment Modes</h2>
+        <div class="content-section">
+            <div class="figure">
+                <img src="category-payment-modes.png" alt="Category and Payment Analysis">
+                <div class="figure-caption">Figure 6: Spending distribution by category and payment modes</div>
+            </div>
+
+            <p><strong>Key Findings:</strong></p>
+            <ul>
+                <li>Bills, groceries and electronics together consume about half the share of customers' expenses.</li>
+                <li>Bills, electronics, health/wellbeing and groceries are the categories for which the credit card is mostly preferred. <strong>The bank must keep this observation in mind while brainstorming features for their new credit card.</strong></li>
+                <li>Credit cards cover 40% of transactions in almost all categories (except food and groceries) while UPI, standing second, holds 20-30% of transaction volume (in fact above 30% in food and groceries). Debit cards still hold 20% share and net banking has 9% share in customer expense payment mode.</li>
+                <li>Customers spend more on bills, food & groceries and electronic products. Among these, they prefer credit cards for bills and electronics and UPI for food and groceries.</li>
+            </ul>
+
+            <p><strong>Strategic Recommendations from Payment Mode Analysis:</strong></p>
+            <ul>
+                <li><strong>Customer beneficial features for bill payments</strong> (like cashbacks or coins), <strong>for food & groceries</strong> (like tie-up with quick commerce apps) and <strong>for electronic products</strong> (like company tie-ups or purchase discounts for high limit users) can be attractive for increased sales.</li>
+                <li><strong>UPI linking of credit cards</strong> might help in sharing value so that credit cards don't lose market share and thus the bank neither loses customers nor its product gets failed.</li>
+            </ul>
+        </div>
+
+        <h2>Average Spending Analysis by Demographics</h2>
+        <div class="content-section">
+            <div class="figure">
+                <img src="spending-demographics.png" alt="Spending by Demographics">
+                <div class="figure-caption">Figure 7: Average spending analysis across different demographic factors</div>
+            </div>
+
+            <p><strong>Detailed Observations:</strong></p>
+            <ul>
+                <li>UPI & Credit Card are most preferred by age group between 21-35, credit card and UPI by age group 35-45, and credit card mostly by ages 45+. The most revenue generating group for credit card however is the age group above 25.</li>
+                <li>Payment by Credit card in Mumbai, Delhi and Bengaluru are the highest. This solidifies our previous recommendation to focus on Mumbai, Delhi and Bengaluru as critical in aspect of retention, especially considering the UPI surge.</li>
+                <li>Business owners and salaried IT employees are spending more and they are spending significantly via credit card, but the spending figures via UPI and debit card are also considerable.</li>
+            </ul>
+
+            <p>Comprehending together all the above points, <strong>the age groups 25-45 are primary focus, the regions Mumbai, Delhi and Bengaluru are vital and Business Owners, Salaried IT employees and Salaried Other Employees are important.</strong></p>
+        </div>
+
+        <h2>Methodology & Tools</h2>
+        <div class="content-section">
+            <p><strong>[Methodology Section]</strong> This analysis was conducted using Python for data processing and analysis, and Power BI for creating interactive visualizations. The workflow involved:</p>
+
+            <ul>
+                <li>Data cleaning and preprocessing of customer and transaction data</li>
+                <li>Exploratory data analysis to identify patterns and trends</li>
+                <li>Calculation of key metrics like Income Utilization Ratio</li>
+                <li>Segmentation analysis across demographics, geography, and occupation</li>
+                <li>Visualization of insights using Power BI dashboards</li>
+            </ul>
+
+            <h3>Code Example</h3>
+
+            <div class="code-section">
+                <pre><code># Calculate average spending per customer
+# Merge spending data with customer data
+
+import pandas as pd
+import numpy as np
+
+# Load the data
+customers = pd.read_csv('dim_customers.csv')
+spends = pd.read_csv('fact_spends.csv')
+
+# Calculate average spending per customer
+avg_spending = spends.groupby('customer_id')['spend'].mean().reset_index()
+avg_spending.columns = ['customer_id', 'avg_spending']
+
+# Merge with customer data
+customer_analysis = customers.merge(avg_spending, on='customer_id', how='left')
+
+# Calculate Income Utilization Ratio
+customer_analysis['income_utilization_ratio'] = (
+    customer_analysis['avg_spending'] / customer_analysis['avg_income'] * 100
+)
+
+# Display summary statistics
+print(customer_analysis[['avg_income', 'avg_spending', 'income_utilization_ratio']].describe())</code></pre>
+            </div>
+        </div>
+
+        <h2>Key Recommendations</h2>
+        <div class="content-section">
+            <p><strong>[Strategic Recommendations]</strong> Based on the comprehensive analysis, here are the data-driven recommendations for Mitron Bank's new credit card product:</p>
+
+            <ul>
+                <li><strong>Target Markets:</strong> Mumbai, Delhi NCR and Bangalore are the potential markets with highest spending and credit card usage.</li>
+                <li><strong>Target Demographics:</strong> Salaried IT employees, Business Owners and Salaried other employees between 25-45 year age group.</li>
+                <li><strong>Product Features:</strong>
+                    <ul>
+                        <li>Discounts in Electronics for high credit limit customers</li>
+                        <li>Cashbacks or Reward Points for bill payments and grocery purchases</li>
+                        <li>Credit card linking to UPI facility for customer retention</li>
+                        <li>Tie-ups with quick commerce companies to boost numbers</li>
+                    </ul>
+                </li>
+                <li><strong>Segment-Specific Features:</strong>
+                    <ul>
+                        <li>Offer discounts on travel and issue gold cards (with more credit limit) to business owners</li>
+                        <li>Offer discounts on Health products and increased credit limit for customers aged above 35</li>
+                        <li>Offer discounts on Electronics for Premium users with high credit limit to encourage them to use credit card for electronic purchases</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <a href="https://github.com/Mpislk/Customer_Transaction_Analysis" class="github-link" target="_blank">View on GitHub</a>
+
+        <div class="share-section">
+            <p>Share:</p>
+        </div>
+
+        <a href="index.html" class="back-link">← Back to Portfolio</a>
+
+        <footer>
+            <p>© 2025 Lakshman Surampudi.</p>
+        </footer>
+    </div>
+</body>
+</html>
