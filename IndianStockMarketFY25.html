@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Performance of Indian Stock Market FY 2024-25 | Lakshman Surampudi Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
-    <!-- Prism.js for code highlighting -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" />
     <style>
         .blog-container {
@@ -61,6 +60,7 @@
             width: 100%;
             border-collapse: collapse;
             margin: 24px 0;
+            font-size: 0.95rem;
         }
         .blog-table th, .blog-table td {
             border: 1px solid #ddd;
@@ -70,8 +70,16 @@
             background: #f4f4f4;
             font-weight: bold;
         }
-        .blog-code {
+        .highlight-box {
+            background: #f0f4ff;
+            border-left: 4px solid #667eea;
+            padding: 16px;
             margin: 24px 0;
+            border-radius: 4px;
+        }
+        .stat-highlight {
+            color: #667eea;
+            font-weight: bold;
         }
         .blog-links {
             margin: 24px 0;
@@ -145,55 +153,245 @@
         <div class="blog-container">
             <img src="images\Gemini_Generated_Image_53jgnf53jgnf53jg.png" alt="Indian Stock Market FY25 Hero Image" class="blog-hero">
             <div class="blog-title">Performance of Indian Stock Market FY 2024-25</div>
-            <div class="blog-meta">By Lakshman Surampudi | <span id="blog-date">Month DD, YYYY</span></div>
+            <div class="blog-meta">By Lakshman Surampudi, Ch Akshitha & Amit Jena | <span id="blog-date">December 07, 2025</span></div>
             <div class="blog-tags">
                 <span class="blog-tag">Python</span>
                 <span class="blog-tag">Power BI</span>
                 <span class="blog-tag">Data Analysis</span>
-                <!-- Add more tags as needed -->
+                <span class="blog-tag">Data Visualization</span>
+                <span class="blog-tag">Financial Analysis</span>
             </div>
-            <p>
-                <!-- Write your introduction or summary paragraph here. -->
-                <strong>[Introduction]</strong> Briefly introduce the project, its objectives, and the scope of analysis. Replace this text with your project introduction.
-            </p>
-            <h2>Data Collection & Preparation</h2>
-            <p>
-                <!-- Describe the data sources, collection process, and any cleaning or transformation steps. -->
-                <strong>[Data Section]</strong> Describe your data sources, collection, and cleaning process here.
-            </p>
-            <h2>Exploratory Data Analysis</h2>
-            <p>
-                <!-- Summarize the main EDA steps and findings. -->
-                <strong>[EDA Section]</strong> Summarize your exploratory analysis and key insights here.
-            </p>
-            <img src="images\stock_market_slide1.jpg" alt="Sample Chart or Visualization" class="blog-image">
-            <div class="blog-img-caption">Figure 1: [Caption describing the image above]</div>
-            <h2>Key Insights & Findings</h2>
-            <p>
-                <!-- List and explain the most important findings from your analysis. -->
-                <strong>[Findings Section]</strong> List your main findings and insights here.
-            </p>
-            <img src="images\stock_market_slide2.jpg" alt="Another Chart or Visualization" class="blog-image">
-            <div class="blog-img-caption">Figure 2: [Caption describing the image above]</div>
-            <h2>Methodology & Tools</h2>
-            <p>
-                <!-- Briefly describe the tools, libraries, and methods used. -->
-                <strong>[Methodology Section]</strong> Describe your workflow, tools, and methods here.
-            </p>
-            <h3>Code Example</h3>
-            <pre class="blog-code"><code class="language-python"># Example Python code snippet
-# Replace with your own code
-import pandas as pd
-import matplotlib.pyplot as plt
 
-data = pd.read_csv('your-data.csv')
-plt.plot(data['Date'], data['Close'])
-plt.title('Stock Closing Prices')
-plt.show()
-</code></pre>
+            <h2>Introduction</h2>
+            <p>
+                The Indian stock market, with its dynamic, complex, and highly volatile nature, presents a perfect subject for end-to-end data analysis. As a key indicator of economic health, investor sentiment, and policy impacts, understanding its movements requires sophisticated statistical and data science techniques. This project represents our team's first step into data journalism, aiming to navigate the audience through the overwhelming yet fascinating journey of India's stock market during FY 2024-25.
+            </p>
+            <p>
+                This comprehensive analysis was created keeping in mind both general audiences curious about the stock market and data professionals who appreciate data-driven storytelling. Our goal is to review and explain what happened in this turbulent year through compelling visualizations and insightful analysis.
+            </p>
+
+            <h2>Project Objective & Scope</h2>
+            <p>
+                The central question driving this project is: <strong>"Is the annual performance of the Indian stock market during FY 2024-25 good or bad?"</strong> This seemingly simple question requires a multi-dimensional analysis, as the answer varies based on numerous factors and perspectives.
+            </p>
+            <p>
+                To answer this comprehensively, we broke down our analysis into six key areas:
+            </p>
+            <ul>
+                <li>Performance of primary indices (BSE SENSEX, NSE NIFTY50) in terms of market cap and index price values</li>
+                <li>Sectoral and segment-wise analysis identifying bullish and bearish trends</li>
+                <li>Market breadth tracking through Advances-Decliners ratio</li>
+                <li>Impact of macroeconomic indicators and global events</li>
+                <li>Institutional sentiment analysis (FII and DII investments)</li>
+                <li>IPO statistics revealing business activity encouragement</li>
+            </ul>
+
+            <h2>Methodology & Data Collection</h2>
+            <p>
+                This end-to-end data analysis project followed a structured approach: defining goals, collecting data from authorized sources (NSE, BSE, SEBI) and reliable financial platforms, cleaning and transforming data using Python and Excel, conducting exploratory analysis, and creating compelling visualizations in Power BI.
+            </p>
+            <div class="highlight-box">
+                <strong>Key Challenge:</strong> Data from various sources came in different formats and with inconsistencies. We implemented an ETL (Extract, Transform, Load) pipeline, using text processing techniques in Python to standardize entries, particularly for IPO data that required merging from three different sources.
+            </div>
+
+            <h2>Executive Summary: FY 2024-25 at a Glance</h2>
+            <img src="images\stock_market_slide1.jpg" alt="Executive Summary Dashboard" class="blog-image">
+            <div class="blog-img-caption">Figure 1: Executive Summary Dashboard showing key market indicators</div>
+            
+            <h3>Benchmark Indices Performance</h3>
+            <p>
+                The year showed modest growth for benchmark indices, though significantly lower than the previous year:
+            </p>
+            <ul>
+                <li><strong>BSE SENSEX:</strong> Closed at <span class="stat-highlight">77,414.92 points</span> (March 28, 2025), gaining 3,763 points for a <span class="stat-highlight">5.11% growth</span> (compared to 24.85% in FY 2023-24)</li>
+                <li><strong>NIFTY50:</strong> Finished at <span class="stat-highlight">23,519.35 points</span>, gaining 1,192 points with <span class="stat-highlight">5.34% growth</span> (compared to 28.61% in FY 2023-24)</li>
+            </ul>
+
+            <h3>Macroeconomic Environment</h3>
+            <p>
+                India's economic fundamentals remained relatively stable throughout FY 2024-25:
+            </p>
+            <ul>
+                <li><strong>GDP Growth:</strong> Steady at 6.2% (compared to 6.5% previous year)</li>
+                <li><strong>GDP per Capita:</strong> Rose from $2.7K to $2.9K, indicating rising income levels</li>
+                <li><strong>Inflation:</strong> Controlled at 4.2%, demonstrating successful monetary policy</li>
+                <li><strong>Fiscal Deficit:</strong> Improved to 4.9% of GDP from 5.6% previous year</li>
+                <li><strong>Repo Rate:</strong> Maintained at 6.5% through most of the year, with a slight reduction to 6.3% in February 2025</li>
+            </ul>
+
+            <h3>Global Investment Sentiment</h3>
+            <p>
+                Foreign Institutional Investors (FIIs) showed significant risk aversion, particularly during October-February, resulting in net outflows. However, Domestic Institutional Investors (DIIs) stepped up, compensating for FII outflows and neutralizing negative effects. This domestic resilience became a crucial stabilizing factor for the market.
+            </p>
+
+            <h3>Market Breadth Concerns</h3>
+            <p>
+                The Advances-Decliners Ratio (ADR) revealed a worrying trend: an observable downward trajectory throughout the year indicated that decliners increased while advances decreased. This suggests that while benchmark indices showed modest gains, the broader market struggled, with fewer stocks participating in the upward movement.
+            </p>
+
+            <h2>Quarterly Performance Analysis</h2>
+            <img src="images\stock_market_slide2.jpg" alt="Index and Sector Performance Dashboard" class="blog-image">
+            <div class="blog-img-caption">Figure 2: Overall Market Performance - Index and Sector Trends Dashboard</div>
+
+            <p>
+                Both indices exhibited a clear pattern: strong performance in the first half followed by significant declines in Q3 and marginal losses in Q4:
+            </p>
+
+            <table class="blog-table">
+                <thead>
+                    <tr>
+                        <th>Quarter</th>
+                        <th>NIFTY 50</th>
+                        <th>SENSEX</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Q1 (Apr-Jun)</td>
+                        <td class="stat-highlight">+6.89%</td>
+                        <td class="stat-highlight">+6.78%</td>
+                    </tr>
+                    <tr>
+                        <td>Q2 (Jul-Sep)</td>
+                        <td class="stat-highlight">+6.91%</td>
+                        <td class="stat-highlight">+6.07%</td>
+                    </tr>
+                    <tr>
+                        <td>Q3 (Oct-Dec)</td>
+                        <td style="color: #d32f2f;">-8.34%</td>
+                        <td style="color: #d32f2f;">-7.27%</td>
+                    </tr>
+                    <tr>
+                        <td>Q4 (Jan-Mar)</td>
+                        <td style="color: #d32f2f;">-0.94%</td>
+                        <td style="color: #d32f2f;">-1.39%</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>
+                The indices peaked around October 2024 (SENSEX above 85K), followed by a consistent downtrend until March 2025. A market resurgence in late March provided some consolation, keeping Q4 losses minimal.
+            </p>
+
+            <h2>Sectoral Performance: Winners and Losers</h2>
+            
+            <h3>Top Performing Sectors (YTD)</h3>
+            <ul>
+                <li><strong>Healthcare:</strong> The star performer with <span class="stat-highlight">12.25% gain (NIFTY)</span> and <span class="stat-highlight">16.77% gain (SENSEX)</span></li>
+                <li><strong>Banking:</strong> Strong performance with <span class="stat-highlight">10.47% growth in BSE Bank</span>, despite inherent short-term volatility. P/E ratio of just 14.32 suggests reasonable valuation</li>
+                <li><strong>IT Sector:</strong> Remained resilient with steady gains throughout the year</li>
+            </ul>
+
+            <h3>Underperforming Sectors</h3>
+            <ul>
+                <li><strong>Energy:</strong> The biggest loser with <span style="color: #d32f2f; font-weight: bold;">-14.99% decline on NIFTY</span>. Started at 40,000 points and ended at 33,682, losing about 6,400 points despite a profitable first half</li>
+                <li><strong>Realty:</strong> Severe losses of <span style="color: #d32f2f; font-weight: bold;">-9.43% (NIFTY)</span> and <span style="color: #d32f2f; font-weight: bold;">-10.86% (SENSEX)</span>. BSE Realty fell from 7,405 to 6,601 points, with particularly sharp collapses in late January and March</li>
+                <li><strong>Auto Sector:</strong> BSE Auto suffered a 2.68% loss despite strong Q1 and Q2 performance</li>
+            </ul>
+
+            <div class="highlight-box">
+                <strong>Valuation Alert:</strong> Most indices showed concerning P/E and P/B ratios indicating overvaluation. NIFTY50 (P/E: 21.37, P/B: 3.48) and SENSEX (P/E: 23.20, P/B: 4.05) both suggest elevated valuations. BSE Healthcare's P/E of 43.67 and BSE Realty's P/E of 60.8 are particularly high, warranting caution from investors.
+            </div>
+
+            <h3>Segment Performance</h3>
+            <ul>
+                <li><strong>BSE:</strong> Mid-cap outperformed with 6.22% growth, though showing a concerning downward quarterly trend (Q1: +16.4%, Q4: -10%)</li>
+                <li><strong>NSE:</strong> Small-cap showed better returns compared to large-cap and mid-cap segments, though with notably higher volatility</li>
+            </ul>
+
+            <h2>IPO Market: Strong Retail Participation</h2>
+            <img src="images\stock_market_slide3.jpg" alt="IPO Performance Dashboard" class="blog-image">
+            <div class="blog-img-caption">Figure 3: IPO Summary Dashboard showing subscription rates and gains</div>
+            
+            <p>
+                The IPO market in FY 2024-25 demonstrated robust activity and strong investor confidence:
+            </p>
+
+            <div class="highlight-box">
+                <strong>Key IPO Statistics:</strong>
+                <ul>
+                    <li>Total IPOs: <span class="stat-highlight">256</span> (72 Mainboard, 184 SME)</li>
+                    <li>Total Issue Size: <span class="stat-highlight">₹164.22 thousand crore</span></li>
+                    <li>Average Listing Gain: <span class="stat-highlight">40%</span></li>
+                    <li>Average Long-term Gain: <span class="stat-highlight">32.94%</span></li>
+                </ul>
+            </div>
+
+            <table class="blog-table">
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Mainboard IPO</th>
+                        <th>SME IPO (Overall)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Number of IPOs</td>
+                        <td>72</td>
+                        <td>184</td>
+                    </tr>
+                    <tr>
+                        <td>Issue Size (₹ Thousand Cr)</td>
+                        <td>155.95</td>
+                        <td>8.27</td>
+                    </tr>
+                    <tr>
+                        <td>Average Listing Gain</td>
+                        <td>26%</td>
+                        <td>45%</td>
+                    </tr>
+                    <tr>
+                        <td>Average Long-term Gain</td>
+                        <td>12.47%</td>
+                        <td>40.69%</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>
+                <strong>Notable Performers:</strong> Waaree Energies led with ₹1,047 listing gain and ₹1,418 long-term gain. Winsol Engineers recorded the highest listing gain percentage of 411%. The analysis revealed a positive correlation between listing day gains and long-term performance, particularly strong in NSE SME IPOs.
+            </p>
+
+            <h2>Retail Investment: Growing Participation</h2>
+            <p>
+                FY 2024-25 witnessed a significant rise in retail participation, driven by:
+            </p>
+            <ul>
+                <li>Growing awareness among retail investors, especially young workforce</li>
+                <li>Widespread internet penetration and instant news access</li>
+                <li>Eased regulations and encouraging incentives from SEBI (such as T+0 settlement cycle)</li>
+                <li>Steady increase in demat account holdings</li>
+                <li>Rising mutual fund investments and IPO subscription rates</li>
+            </ul>
+
+            <h2>Conclusion & Future Outlook</h2>
+            <p>
+                FY 2024-25 presented a year of subdued growth for the Indian stock market. While benchmark indices (SENSEX and NIFTY50) managed modest gains of around 5%, this represents a significant slowdown from the previous year's 24-28% growth. The year was characterized by a tale of two halves: strong performance in Q1 and Q2 followed by substantial losses in Q3 and marginal declines in Q4.
+            </p>
+            <p>
+                The downward trend in the Advances-Decliners Ratio coupled with significant sectoral divergence (Healthcare and Banking thriving while Energy and Realty suffered) paints a picture of a market under stress. Foreign institutional investor outflows during October-February added to the pressure, though domestic institutional investors provided crucial support.
+            </p>
+
+            <div class="highlight-box">
+                <strong>Silver Linings:</strong>
+                <ul>
+                    <li>Stable macroeconomic fundamentals (6.2% GDP growth, controlled inflation at 4.2%)</li>
+                    <li>Strong retail participation and IPO market enthusiasm</li>
+                    <li>Market resurgence in March 2025 providing hope for recovery</li>
+                    <li>Resilient domestic institutional support compensating for foreign outflows</li>
+                </ul>
+            </div>
+
+            <p>
+                The market resurgence in the final month of the financial year—reflected in index recovery, improved ADR, and renewed FII investments—offers consolation and hope. This late-year momentum suggests potential for brighter prospects in FY 2025-26, though caution is warranted given elevated valuations across most indices.
+            </p>
+            <p>
+                Overall, despite geopolitical tensions and global headwinds, the Indian stock market demonstrated resilience underpinned by strong domestic fundamentals and adaptive investor behavior. The journey through FY 2024-25 serves as a reminder of the market's inherent volatility and the importance of diversified participation, robust investor education, and long-term perspective in navigating equity investments.
+            </p>
+
             <div class="blog-links">
                 <a href="https://github.com/LakshmanSurampudi/Indian-Stock-Market-Performance-in-FY-2024-25" target="_blank" rel="noopener">View on GitHub</a>
-                <!-- Add more links as needed -->
             </div>
             <a href="index.html" class="back-btn">&larr; Back to Portfolio</a>
             <div class="social-share">
@@ -212,7 +410,6 @@ plt.show()
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
     <script>
-        // Set current date if not filled
         const dateElem = document.getElementById('blog-date');
         if (dateElem && dateElem.textContent === 'Month DD, YYYY') {
             const now = new Date();
@@ -221,4 +418,4 @@ plt.show()
         }
     </script>
 </body>
-</html> 
+</html>
